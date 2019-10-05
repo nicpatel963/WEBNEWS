@@ -1,0 +1,24 @@
+<html>
+<head>
+   {% include "design.html" %}
+</head>
+<body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="alert alert-primary" role="alert">
+<h1>TOP-STORIES</h1>
+</div>
+
+  <ul>
+    {% for title,a_href in param.items %}
+       <div class="container">
+         <div class="alert alert-secondary" role="alert">
+            <li>
+                <h4><a href={{a_href}}>{{title}}</a></h4>
+            </li>
+         </div>
+       </div>
+
+    {% endfor %}
+  </ul>
+</body>
+</html>

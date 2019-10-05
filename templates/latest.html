@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    {% include "design.html" %}
+</head>
+
+<div class="alert alert-primary" role="alert">
+<h1>latest NEWS</h1>
+</div>
+
+<ul>
+    <div class="row">
+        {% for img_link,story_title,story_link,story in zip_list %}
+        <div class="column">
+        <div class="card" style="width: 20rem;">
+            <img src={{img_link}} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{story_title}}</h5>
+                <p class="card-text">{{story}}</p>
+                <a href={{story_link}} class="btn btn-primary">more</a>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+</ul>
+
+</body>
+</html>

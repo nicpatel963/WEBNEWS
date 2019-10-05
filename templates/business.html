@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    {% include "design.html" %}
+</head>
+
+<div class="alert alert-primary" role="alert">
+<h1>Business NEWS</h1>
+</div>
+
+<ul>
+    {% for img_link,story_title,story_link in zip_list %}
+      <div class="container">
+        <div class="alert alert-secondary" role="alert">
+          <li>
+              <h5><img src={{img_link}}>  <a href={{story_link}}>{{story_title}}</a></h5>
+          </li>
+        </div>
+      </div>
+    {% endfor %}
+  </ul>
+
+</body>
+</html>
